@@ -1,0 +1,53 @@
+.upin {
+    /*
+    text-decoration: none;
+    color: black;
+    */
+    float: right;
+    margin-right: 1%;
+    padding: 0.3% 0.3% 0.7% 0.3%;
+}
+/*
+.upin:hover {
+    color: black !important;
+    text-decoration: none;
+    background-color: #D3D3D3;
+    padding: 0.3% 0.3% 0.7% 0.3%;
+    margin-right: 1%;
+}
+*/
+#logo {
+    font-size: 1.3em;
+    margin-left: 1%;
+    color: black;
+    padding: 1% 1% 0.95% 1%;
+}
+
+#logo:hover {
+    text-decoration: none;
+    background-color: #D3D3D3;
+    padding: 1% 1% 0.95% 1%;
+    margin-left: 1%;
+}
+
+
+#navigation {
+    background-color: #e4e4e4;
+    margin-bottom: 1%;
+    padding-bottom: 0.4%;
+    padding-top: 0.7%;
+    position: fixed;
+    width: 100%;
+}
+
+.outliner {
+    outline: 2px solid #D3D3D3;
+    background-color: #fafafa;
+    text-align: center;
+    padding: 2% 2% 2% 2%;
+}
+
+.centerer {
+    margin: auto;
+    margin-top: 3% !important;
+}

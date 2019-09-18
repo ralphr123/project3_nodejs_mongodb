@@ -1,0 +1,72 @@
+<% include partials/header %>
+
+<!--
+
+<nav class="navbar navbar-light bg-faded">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">YelpCamp</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+-->
+
+
+
+<br><br><br>
+<div class="container">
+    <header class="jumbotron">
+        <h1>Welcome to YelpCamp!</h1>
+        <p>View our handpicked campgrounds from all over the world.</p>
+        <p><a class="btn btn-outline-primary btn-md" href='/campgrounds/new'>Modify or search for campgrounds</a></p>
+    </header>
+
+
+<% var campnamer, campsrcer, namer; %>
+
+<div class="row" style="display:flex; flex-wrap:wrap;">
+    <% campgrounds.forEach(function(campground) { %>
+        <% if (namer != undefined) { %>
+        <% if (campground.name.toLowerCase().includes(namer.toLowerCase())) { %>
+            <div class="col-md-3 col-sm-6">
+                <div class="outliner">
+                    <h4><%= campground.name %></h4>
+                    <img class="img-responsive img-thumbnail" src="<%= campground.image %>">
+                    <p>
+                        <a href="/campgrounds/<%= campground._id %>" class="btn btn-outline-primary centerer">More Info</a>
+                    </p>
+                </div>
+            </div>
+            
+        <% } %>
+    <% } else { %>
+            <div class="col-md-3 col-sm-6">
+                <div class="outliner">
+                    <h4><%= campground.name %></h4>
+                    <img class="img-responsive img-thumbnail" src="<%= campground.image %>">
+                    <p>
+                        <a href="/campgrounds/<%= campground._id %>" class="btn btn-outline-primary centerer">More Info</a>
+                    </p>
+                </div>
+            </div>
+    <% } %>
+    
+    <% }); %>
+
+</div>
+
+
+
+
+
+<% include partials/footer %>
+
+</div>
